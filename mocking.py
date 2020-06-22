@@ -44,7 +44,7 @@ def sarcastic():
     text = request.form.get('text')
     channel_id = request.form.get('channel_id')
     user_id = request.form.get('user_id')
-    user_name = client.users_info(user=user_id)["user"]["name"]
+    user_name = client.users_info(user=user_id)["user"]["profile"]["display_name"]
     icon_url = client.users_info(user=user_id)["user"]["profile"]["image_512"]
 
     if command == "mocking":
