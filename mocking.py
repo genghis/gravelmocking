@@ -1,13 +1,13 @@
 import random
 import os
 import slack
-import requests
 from flask import Flask, request
 
 SLACK_TOKEN = os.environ['SLACK_TOKEN']
 client = slack.WebClient(token=SLACK_TOKEN)
 
 app = Flask(__name__)
+
 
 def randomize_caps(text):
     newstring = ':mocking: '
